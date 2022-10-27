@@ -1,1 +1,71 @@
 \section{Introducción}
+\subsection{Capacidad calorífica}
+La capacidad calorífica de un sistema puede ser determinada cuando un sistema que absorbe calor tiene una variación de temperatura inicial $T_i$ a una temperatura final $T_f$, es durante dicha transferencia de calor $\delta Q$ que se determina:
+\begin{align}
+    C=\frac{\delta Q}{T_f-T_i}
+\end{align}
+Que teniendo valores cada vez más pequeños para dichas variaciones, tendremos:
+\begin{align}
+    C=\frac{\delta Q}{\Delta T}
+\end{align}
+Se nota de tal forma que  la capacidad calorífica,se puede definir como el cociente entre la cantidad de energía calorífica transmitida sobre el cambio de temperatura. Es decir, la cantidad de energía necesaria para cambiar la temperatura en una unidad de un determinado sistema.\cite{juleve}
+En general, la capacidad calorífica depende de la temperatura como de la presión. Si se sigue un proceso cuasi-estático, se tendrá:
+\begin{equation}
+    \Delta Q= dU+\Delta W=du+PdV
+\end{equation}
+
+
+\subsubsection{Calor específico (capacidad calorífica específica)}
+La versión intensiva de la ecuación \eqref{eq:capacidad_calo} introduciendo el cambio de variable $C=mc$ siendo $m$ la masa del cuerpo y $c$ su calor específico, el cual, evidentemente, es independiente de la masa. Haciendo este cambio, se tiene
+
+\begin{equation}
+    \begin{aligned}
+        c &= \dfrac{1}{m}\dfrac{\delta Q}{\Delta T} \\
+        \delta Q &= m c \Delta T
+    \end{aligned}
+\end{equation}
+
+En general, por la primera ley, $\delta Q = \d{U} + \delta W$, este diferencial de calor toma formas distintas para dos casos: presión constante y volumen constante. Cuando el volumen es constante, $\delta W = P\d V = 0$, mientras que si la presión es constante $\delta Q = \d H = \d{(U + PV)}$. De aquí que
+
+\begin{align*}
+    c_v &= \frac{1}{m}\left(\ddp{U}{T}\right)_v \\
+    c_p &= \frac{1}{m}\left(\ddp{H}{T}\right)_p
+\end{align*}
+
+Para un proceso cuasi-estático arbitrario entre los estados $A$ y $B$,
+
+\begin{equation}
+    c_c = \lim_{A\to B} \frac{1}{m}\left(\frac{Q}{\Delta T}\right)_c =  \frac{1}{m}\left(\frac{\delta Q}{\d T}\right)_c
+\end{equation}
+
+\subsection{Proceso adiabático en el calorímetro}
+
+El calorímetro es básicamente un recipiente aislado térmicamente de modo que se considera que tiene paredes adiabáticas. Teniendo en cuenta esto, se puede asegurar (idealmente) que no se intercambia energía con el exterior y que el calor intercambiado se da solamente entre el calorímetro y la muestra,
+
+\begin{align*}
+    \delta Q_{\text{calorímetro}} + \delta Q_{\text{muestra}} = 0 \\
+    \left(M+ k \right)(T_f-T_0)c_{\text{agua}} + (mc)_{\text{muestra}}(T_f-T) = 0
+\end{align*}
+Donde $k=(mc)_{\text{cal.}}/c_{\text{agua}}$ es el equivalente en agua del calorímetro, $T_0$ es la temperatura inicial del agua en el calorímetro, $T$ es la temperatura inicial de la muestra y $T_f$ es la temperatura de equilibrio que se alcanza luego de un tiempo. Entonces, para la muestra se obtiene que $c_{\text{muestra}}$
+
+\begin{equation}
+c_{\text{muestra}} = c_{\text{agua}}\dfrac{M + k}{m_{\text{muestra}}}\dfrac{T_f-T_0}{T-T_f}
+\end{equation}
+\subsection{Temperatura de Debye}
+
+Ene los sólidos cristalinos a temperatura ambiente se tiene una capacidad calorífica que es constante, apróximadamente 3R, donde $R=N_ak_B$ con $N_a$ el número de avogadro y $k_B$ la constante de Boltzmann, esto es conocido como la ley de Dulong-Petit, que encaja en las predicciones del teorema de equipartición de la energía.
+
+Einstein fue la primera persona en proporcionar una deducción de la capacidad calorífica de los sólidos. Tiempo después, Debye propuso una mejora para la teoría de Einstein, prediciendo la capacidad calorífica molar de forma:
+
+\begin{equation}
+    \frac{C_v}{R}(\frac{\Theta_E}{T})^2(\frac{e(\frac{\Theta_E}{T})}{(\Theta_E-1)^2})^4
+\end{equation}
+Con $\Theta_E$ es un parámetro conocido como la característica de Einstein del sólido. En general el modelo de Einstein funcionaba bien en un amplio intérvalo de temperatura, sin embargo en 1912 cuando Debye aborda el problema teniendo en consideracipon la propagación de vibraciones moleculares en el material, se tiene :
+\begin{align}
+    C_v=\frac{9N_ak_B}{\Theta_D^3}\frac{\partial}{\partial T}(T^4 \int_{0}^{\frac{\Theta_D}{T}} \frac{x^3}{e^x-1}dx)
+\end{align}
+con $k_B\Theta_D$:
+\begin{equation}
+    k_B\Theta_D=h(\frac{2}{c^3_t}+\frac{1}{c^3_t})^\frac{-1}{3}
+\end{equation}
+Dónde $\Theta_D$ corresponde al modo normal de oscilación más alto, es decir, la temperatura más alta que puede ser alcanzada con un solo modo normal de vibración para el sistema.

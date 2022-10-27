@@ -1,1 +1,67 @@
-\section{Descripción experimental}
+\section{Descripción experimental y procedimiento}
+
+Las mediciones de esta práctica fueron realizadas en dos sesiones,midiendo los calores específicos de diversas muestras de diferentes materiales: Hierro, aluminio y cobre.
+
+Teniendo de este modo:
+\subsection{Estimación capacidad calorífica a temperatura ambiente}
+Se dispone entonces de un modulo de termocupla el cual trabaja en un rango de 200mV cuya medida retorna valores en grados Celsius, un vaso calorímetro cuya masa es de 48.8g teniendo una disposición experimental como se ilustra en la figura \ref{fig:disp}
+
+Para medir el calor específico de las muestras a temperatura ambiente (apróximadamente 19°), se realiza :
+\begin{enumerate}
+    \item Se dispone de una cantidad de agua en un recipiente, suficiente para cubrir la muestra, y se calienta por medio de una estufa hasta que este alcance el punto de ebullición del agua, en dicho punto, se mide la temperatura y se extrae la muestra.
+    
+   \item En el vaso calorímetro se vierte una masa de agua que apenas cubra la muestra, se mide su temperatura.
+     
+    \item Finalmente es introducida la muestra en el vaso calorímetro, midiendo la temperatura de equilibrio.
+     
+\end{enumerate}
+
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+         Material&Masa(g)$\pm$ 0.1  \\\hline
+         Hierro&51.6\\
+         Aluminio&17.4\\
+         Cobre&19.8\\
+\hline
+    \end{tabular}
+    \caption{Masas de las muestras usadas en la práctica}
+    \label{tab:masas}
+\end{table}
+La conservación de la energía implica que el calor absorbido por el agua y el calorímetro debe ser igual al calor cedido por la muestra.
+    
+    Se define de esta manera:
+    
+    \begin{align*}
+        m_c&:= \textrm{masa calorímetro}\\
+        m_a&:= \textrm{masa de agua en calorímetro}\\
+        m_m&:= \textrm{masa muestra}\\
+    \end{align*}
+Así tendremos en la ecuación \ref{eq:masas} 
+
+\begin{equation}
+    m_mc_m(T_{eq}-T_i^{(m)})=(c_{cal}m_{cal}+c_{ag}m_{ag})(T_{eq}-T_i^{(c)})
+\end{equation}
+
+Despejando para $c_m$:
+\begin{equation}
+    c_m=\frac{m_{cal}c_{cal}+m_{ag}c_{ag}}{m_m}\frac{(T_{eq}-T_i^{(c)})}{T_{eq}-T_i^{(m)}}
+\end{equation}
+
+\subsection{Calor específico a bajas temperaturas}
+Para la medición del calor específico a bajas temperaturas, se hace uso de 2 vasos de poliestireno expandido, conocido localmente como Icopor, el cual tiene por contenido nitrógeno el cual se encuentra en constante estado de evaporación.
+
+Se establece inicialmente una medición para determinar la tasa de evaporación del nitrógeno, el cual se puede establecer es apróximadamente constante, esto relizando una constante medición de la masa perdida por evaporación.
+Posteriormente son introducidas una a una las muestras , lo cual aumenta dicha taas de evaporació , que en unos primeros instantes se muestra con una reacción bastante (fuerteJOJOJO)  esto debido a que se produce un intercambio de energía térmica entre la muestra y el nitrógeno, posteriormente, la tasa de evaporación vuelve a ser constante una vez la muestra alcanza la temperatura de ebullición del nitrogeno.
+
+Dado que la temperatura ambiente a la que es introducida la muestra es considerablemente mayor al punto de ebullición del nitrógeno, se presenta en la interacción el efecto Leidenfrost.
+
+La masa evaporada por el intercambio de calor con la muestra, se calcula como :
+\begin{equation}
+    \Delta m L_{ev}=C_p(T_i-T_f)
+\end{equation}
+Con $C_p$ la capacidad calorífica  a presión constante, $T_i$ la temperatura de la muestra antes de ser sumergida en el nitrógeno.  El calor latente de evaporación del nitrógeno es $L_{ev}=99.7 J \cdot g^{-1}$.
+
+\subsection{Temperatura de Debye}
